@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 class sample {
-
+	int a,b;
     public:
-    int a,b;
+    sample()
+    {
+    }
     sample(int x,int y){
         a=x;
         b=y;
@@ -12,11 +14,12 @@ class sample {
         a = x.a;
         b = x.b;
     }
-    
-    sample(){
-     
+    void display()
+    {
+	    cout<<a;
+	    cout<<b;
     }
-   
+
 };
 
 int main(){
@@ -26,6 +29,6 @@ int main(){
     sample obj3;
     obj3=obj1;
    
-    cout<<obj1.a<<endl<<obj1.b<<endl;
+   obj3.display();
     return 0;
 }
