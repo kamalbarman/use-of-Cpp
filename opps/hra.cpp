@@ -25,7 +25,7 @@ public:
   }
   void showmark(){
     cout<<"\nmark in sub1 : "<<sub1;
-    cout<<"\nmarl in sub2 : "<<sub2;
+    cout<<"\nmarl in sub2 : "<<sub2<<endl;
   }
 };
 int main(){
