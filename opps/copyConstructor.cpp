@@ -1,11 +1,14 @@
 #include <iostream>
 using namespace std;
+
 class sample {
 	int a,b;
     public:
     sample()
     {
+
     }
+    
     sample(int x,int y){
         a=x;
         b=y;
@@ -23,7 +26,6 @@ class sample {
 };
 
 int main(){
-    
     sample obj1(10,15);
     sample obj2(obj1);
     sample obj3;
