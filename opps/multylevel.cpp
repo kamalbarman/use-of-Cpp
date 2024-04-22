@@ -28,8 +28,6 @@ public:
     cout<<"\nmark in sub1 : "<<sub1;
     cout<<"\nmarl in sub2 : "<<sub2<<endl;
   }
-
-
 };
 
 class result : public Test,public student{
@@ -39,10 +37,10 @@ class result : public Test,public student{
         total = sub1+sub2;
         showdata();
         showmark();
-        
         cout<<"\n total = "<<total<<endl;
     }
 };
+
 int main(){
   result t1;
 t1.getdata();
