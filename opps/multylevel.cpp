@@ -28,8 +28,6 @@ public:
     cout<<"\nmark in sub1 : "<<sub1;
     cout<<"\nmarl in sub2 : "<<sub2<<endl;
   }
-
-
 };
 
 class result : public Test,public student{

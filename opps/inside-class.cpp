@@ -6,9 +6,6 @@ class hero{
     char level;
     public:
     int helth;
-
-   
-
     char getLevel(){
         return level;
     }
