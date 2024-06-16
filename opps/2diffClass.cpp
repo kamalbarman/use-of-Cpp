@@ -18,7 +18,7 @@ public:
     void setvalue(int value) {
         data1 = value;
     }
-    friend void add(xyz, abc); // Friend function declaration
+    friend void add(xyz, abc);  // Friend function declaration
 };
 
 // Definition of friend function

@@ -98,4 +98,4 @@ t1.getdata();
 t1.getmark();
 t1.display();
 }
->>>>>>> refs/remotes/origin/main
+
