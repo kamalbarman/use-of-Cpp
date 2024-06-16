@@ -18,7 +18,7 @@ class sample {
     }
     void display()
     {
-	    cout<<a;
+	    cout<<a<<endl;
 	    cout<<b;
     }
 
