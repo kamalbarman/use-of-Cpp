@@ -30,6 +30,10 @@
 //     return 0;
 // }
 
+
+
+
+
 // #include <iostream>
 
 // using namespace std;
@@ -65,32 +69,79 @@
 
 // }
 
+
+// unary overloading
+
+// #include <iostream>
+// using namespace std;
+
+// class Number {
+// private:
+//     int value;
+
+// public:
+//     Number(int v) : value(v) {}
+
+//     // Overload the unary minus (-) operator
+//     Number operator-() const {
+//         return Number(-value);
+//     }
+
+//     void display() const {
+//         cout << value << endl;
+//     }
+// };
+
+// int main() {
+//     Number num1(5);
+//     Number num2 = -num1; // Using the overloaded - operator
+
+//     num1.display(); // Output: 5
+//     num2.display(); // Output: -5
+
+//     return 0;
+// }
+
+
+
+//  overloading << and >>
 #include <iostream>
 using namespace std;
 
-class Number {
+class Complex {
 private:
-    int value;
+    int real;
+    int imag;
 
 public:
-    Number(int v) : value(v) {}
+    Complex(int r = 0, int i = 0) : real(r), imag(i) {}
 
-    // Overload the unary minus (-) operator
-    Number operator-() const {
-        return Number(-value);
-    }
+    // Friend function to overload the << operator
+    friend ostream& operator<<(ostream& os, const Complex& c);
 
-    void display() const {
-        cout << value << endl;
-    }
+    // Friend function to overload the >> operator
+    friend istream& operator>>(istream& is, Complex& c);
 };
 
+// Overload the << operator for Complex
+ostream& operator<<(ostream& os, const Complex& c) {
+    os << c.real << " + i" << c.imag;
+    return os;
+}
+
+// Overload the >> operator for Complex
+istream& operator>>(istream& is, Complex& c) {
+    cout << "Enter real part: ";
+    is >> c.real;
+    cout << "Enter imaginary part: ";
+    is >> c.imag;
+    return is;
+}
+
 int main() {
-    Number num1(5);
-    Number num2 = -num1; // Using the overloaded - operator
-
-    num1.display(); // Output: 5
-    num2.display(); // Output: -5
-
+    Complex c1;
+    cout << "Enter a complex number:\n";
+    cin >> c1; // Calls the overloaded >> operator
+    cout << "You entered: " << c1 << '\n'; // Calls the overloaded << operator
     return 0;
 }
