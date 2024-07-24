@@ -25,11 +25,10 @@ public:
   }
   void showmark(){
     cout<<"\nmark in sub1 : "<<sub1;
-<<<<<<< HEAD
+
     cout<<"\nmarl in sub2 : "<<sub2;
-=======
+
     cout<<"\nmarl in sub2 : "<<sub2<<endl;
->>>>>>> refs/remotes/origin/main
   }
 };
 int main(){
